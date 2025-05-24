@@ -20841,6 +20841,7 @@
       });
 
       mermaidText += edges.map(e => '  ' + e).join('\n');
+      mermaidText += `\nstyle ${center} fill:#f9f`;
 
       const graphArea = document.getElementById('mermaidGraph');
       
