@@ -318,6 +318,11 @@
         const response = await fetch('UnrealEngine.txt');
         const text = await response.text();
         inputArea.value = text;
+        
+        window.parseGraphData(inputArea.value);
+        if (window.selectedNode) {
+          window.renderMermaidGraph(window.selectedNode);
+        }
       } catch (error) {
         console.error('Failed to load UnrealEngine.txt:', error);
         alert('UnrealEngine.txtの読み込みに失敗しました');
